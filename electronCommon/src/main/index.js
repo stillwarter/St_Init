@@ -1,3 +1,5 @@
+import { fileMainList } from "./filemange/fileManageMain";
+
 export const MainEventList = [
   {
     channel: "get-system-info",
@@ -16,4 +18,5 @@ export const MainEventList = [
       };
     },
   },
+  ...fileMainList,
 ];

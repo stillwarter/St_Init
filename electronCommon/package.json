@@ -53,6 +53,7 @@
     "fs-extra": "^11.2.0",
     "gif.js": "^0.2.0",
     "gifshot": "^0.4.5",
+    "gray-matter": "^4.0.3",
     "jimp": "^1.6.0",
     "jsgif": "^1.0.2",
     "md-editor-v3": "^4.20.2",

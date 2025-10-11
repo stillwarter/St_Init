@@ -6,9 +6,13 @@ import { ipcMain } from "electron-better-ipc";
 import { Stconfig } from "./config/stconfig";
 import { MainEventList } from "./main/index";
 import { registerIpcHandlers } from "./utils/ipc/ipcMainHandle";
+import { basePathInit } from "./utils/path/pathInit";
 if (started) {
   app.quit();
 }
+
+// process资源路径初始化
+basePathInit();
 
 // 确保应用单实例运行
 const gotTheLock = app.requestSingleInstanceLock();

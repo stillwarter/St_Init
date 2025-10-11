@@ -3,5 +3,11 @@ export const Stconfig = {
   layout: {
     footerheight: "35px",
   },
-  stwords:true
+  stwords: true,
+  basePath: [
+    {
+      processName: "plan",
+      path: "public/Plan",
+    },
+  ],
 };
