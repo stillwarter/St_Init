@@ -7,6 +7,7 @@ export const baseRouter = {
       path: "main",
       name: "main",
       component: () => import("@/views/index.vue"),
+      // component: () => import("@/views/test/test.vue"),
       meta: {
         title: "主页",
       },
