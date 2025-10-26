@@ -10,7 +10,7 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "cvm": "node src/utils/createViewModule/index"
+    "cvc": "node src/utils/createViewCode/index"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.5.0",
@@ -55,6 +55,7 @@
     "gif.js": "^0.2.0",
     "gifshot": "^0.4.5",
     "gray-matter": "^4.0.3",
+    "inquirer": "^12.10.0",
     "jimp": "^1.6.0",
     "jsgif": "^1.0.2",
     "md-editor-v3": "^4.20.2",
