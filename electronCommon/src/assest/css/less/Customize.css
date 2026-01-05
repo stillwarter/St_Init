@@ -1,0 +1,10 @@
+.darkWarp .demofilebox {
+  background: #fff;
+  width: 100%;
+  height: 100px;
+}
+.dayWarp .demofilebox {
+  background: #000;
+  width: 100%;
+  height: 100px;
+}

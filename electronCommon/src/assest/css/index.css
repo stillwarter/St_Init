@@ -1,6 +1,9 @@
+@import url(./less/Customize.css);
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   max-width: 100vw;
   margin: 0px;
   user-select: none;
@@ -25,6 +28,15 @@ p {
   margin: 0 !important;
 }
 
+.fullbox {
+  width: 100%;
+  height: 100%;
+}
+
+.flexbox {
+  display: flex;
+}
+
 /* 全局滚动条样式 */
 ::-webkit-scrollbar {
   width: 4px; /* 设置滚动条的宽度 */
@@ -44,7 +56,7 @@ p {
 /* 自定义font */
 @font-face {
   font-family: "catbite";
-  src: url("../font/猫啃什锦黑.woff2") format("woff2");
+  src: url("../../../public/font/猫啃什锦黑.woff2") format("woff2");
   font-display: swap;
 }
 

@@ -1,5 +1,4 @@
-import { fileMainList } from "./filemange/fileManageMain";
-import { a } from "./filemange/fileManageMain";
+import { tempfileMainList } from "./filemange/tempFile/tempFileManageMain";
 
 export const MainEventList = [
   {
@@ -19,5 +18,5 @@ export const MainEventList = [
       };
     },
   },
-  ...fileMainList,
+  ...tempfileMainList,
 ];

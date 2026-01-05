@@ -1,26 +1,25 @@
 <script setup>
 import { computed } from "vue";
-import { theme } from "ant-design-vue";
 import { useSetStore } from "./store/setting";
+import { getThemeConfig } from "./config/theme/themeConfig";
 const setStore = useSetStore();
 const themeState = computed(() => setStore.theme);
 
 const themes = computed(() => {
-  return {
-    algorithm:
-      themeState.value == "dark" ? theme.darkAlgorithm : theme.defaultAlgorithm,
-  };
+  return getThemeConfig(themeState.value);
 });
 
-const testinfo = async () => {
-  let a = await window.electronAPI.getplanJson();
-  console.log(a, "a");
-};
-testinfo();
+// const testinfo = async () => {
+//   let a = await window.electronAPI.getplanJson();
+//   console.log(a, "a");
+// };
+// testinfo();
 </script>
 
 <template>
   <a-config-provider :theme="themes">
-    <router-view></router-view>
+    <div :class="themeState == 'dark' ? 'darkWarp' : 'dayWarp'">
+      <router-view></router-view>
+    </div>
   </a-config-provider>
 </template>

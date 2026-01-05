@@ -1,5 +1,5 @@
 export const Stconfig = {
-  projname: "程序",
+  projname: "初始化程序",
   layout: {
     footerheight: "35px",
   },

@@ -6,13 +6,15 @@ import { ipcMain } from "electron-better-ipc";
 import { Stconfig } from "./config/stconfig";
 import { MainEventList } from "./main/index";
 import { registerIpcHandlers } from "./utils/ipc/ipcMainHandle";
-import { basePathInit } from "./utils/path/pathInit";
+// import { basePathInit } from "./utils/path/pathInit";
+import { usefilepathInit } from "./config/fileSave/filesaveHandle/pathInit";
 if (started) {
   app.quit();
 }
 
 // process资源路径初始化
-basePathInit();
+// basePathInit();
+usefilepathInit();
 
 // 确保应用单实例运行
 const gotTheLock = app.requestSingleInstanceLock();
@@ -28,7 +30,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     title: Stconfig.projname,
-    icon: path.join(__dirname, "penicon.ico"),
+    icon: path.join(__dirname, "init.png"),
     // frame: false, // 不显示边框和工具栏
     autoHideMenuBar: true, // 隐藏菜单栏
     webPreferences: {
@@ -63,14 +65,3 @@ app.whenReady().then(() => {
   // app.setAppUserModelId("catbox");
   createWindow();
 });
-
-// app.on("before-quit", (event) => {
-//   // 在这里进行关闭前的操作
-//   console.log("应用即将关闭，执行清理操作...");
-// });
-
-// app.on("window-all-closed", () => {
-//   if (process.platform !== "darwin") {
-//     app.quit();
-//   }
-// });

@@ -9,7 +9,7 @@ module.exports = {
     // name: packageInfo.name,
     asar: true,
     extraResource: path.join(__dirname, "public"),
-    icon: path.join(__dirname, "penicon.ico"),
+    icon: path.join(__dirname, "init.ico"),
     extraFiles: [
       {
         from: path.join(__dirname, "LICENSE"), // 源文件路径（项目根目录的LICENSE）

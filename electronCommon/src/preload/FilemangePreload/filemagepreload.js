@@ -1,9 +1,8 @@
 import { initManangeFilePreload } from "./filemanageInitPreload";
-import { Stconfig } from "../../config/stconfig";
+import { tempfileList } from "../../config/fileSave/filesaveConfig";
 function setFileManageProloadList() {
   const result = {};
-  const advanceFileList = Stconfig.basePath;
-  for (const item of advanceFileList) {
+  for (const item of tempfileList) {
     Object.assign(result, initManangeFilePreload(item.processName));
   }
   return result;

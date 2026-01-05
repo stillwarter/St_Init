@@ -1,7 +1,7 @@
 import {
   overwriteFileContent,
   readAllFilesContent,
-} from "../../utils/fileHandle";
+} from "../../../utils/fileHandle";
 import path from "path";
 
 export function initManangeFile(processName) {
