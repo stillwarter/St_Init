@@ -14,7 +14,7 @@ export const baseRouter = {
     {
       path: "tempfiledemo",
       name: "tempfiledemo",
-      component: () => import("@/views/tempfiledemo/tempfiledemo.vue"),
+      component: () => import("@/views/demo/tempfiledemo.vue"),
       meta: {
         title: "临时文件demo",
       },

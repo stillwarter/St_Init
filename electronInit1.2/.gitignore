@@ -1,0 +1,11 @@
+node_modules/
+dist/
+out/
+.vite/
+*.log
+.DS_Store
+Thumbs.db
+
+# 本地覆盖（勿提交密钥）
+.env.local
+.env.*.local
