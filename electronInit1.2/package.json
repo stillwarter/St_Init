@@ -1,5 +1,6 @@
 {
-  "name": "electron-vue3-starter",
+  "name": "electron-init",
+  "author": "stillwarter",
   "version": "1.0.0",
   "description": "A minimal Electron + Vite + Vue 3 (JavaScript) starter project.",
   "main": "electron/main.js",
@@ -8,6 +9,7 @@
     "dev:vite": "vite",
     "dev:electron": "node scripts/wait-electron.js",
     "build": "npm run build:renderer && npm run build:electron",
+    "buildWithNoSinge": "npm run build:renderer && npm run build:electron --  --config electron-builder.yml",
     "build:renderer": "vite build",
     "build:electron": "electron-builder",
     "lint": "eslint .",
@@ -17,11 +19,15 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
-    "appId": "com.example.electron-vue3-starter",
+    "appId": "stillwarter",
+    "productName": "stillwarter-electron-init",
     "files": [
       "dist/",
       "electron/**/*"
     ],
+    "win": {
+      "icon": "public/icon.ico"
+    },
     "directories": {
       "buildResources": "build"
     }
@@ -45,7 +51,8 @@
     "eslint-plugin-vue": "^9.31.0",
     "globals": "^15.12.0",
     "prettier": "^3.4.2",
-    "wait-on": "^8.0.0",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "vite-plugin-vue-devtools": "^7.6.4",
+    "wait-on": "^8.0.0"
   }
 }

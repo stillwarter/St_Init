@@ -5,7 +5,8 @@ const chokidar = require('chokidar');
 
 const root = path.join(__dirname, '..');
 
-const { loadDevEnv, getDevServerPort } = require('./dev-config');
+const { loadDevEnv, getDevServerPort } = require('../electron/config/dev-config');
+// const { loadDevEnv, getDevServerPort } = require('./dev-config');
 
 loadDevEnv();
 
@@ -18,11 +19,7 @@ let watcher = null;
 let restartTimer = null;
 let isRestarting = false;
 const filterDevtoolsNoise = process.env.FILTER_DEVTOOLS_NOISE !== '0';
-const NOISE_PATTERNS = [
-  /Autofill\.enable/i,
-  /Autofill\.setAddresses/i,
-  /Request Autofill\./i
-];
+const NOISE_PATTERNS = [/Autofill\.enable/i, /Autofill\.setAddresses/i, /Request Autofill\./i];
 
 function isKnownNoise(line) {
   if (!filterDevtoolsNoise) return false;

@@ -1,0 +1,35 @@
+appId: stillwarter
+productName: stillwarter-electron-init
+
+files:
+  - build/**/*
+  - dist/**/*
+  - electron/**/*
+  - node_modules/dotenv/**/*
+  - node_modules/electron-log/**/*
+  - '!node_modules/.cache'
+  - '!node_modules/**/{test,__tests__,tests}'
+  - '!**/node_modules/**/*.{coffee,map,ts}'
+  - '!**/node_modules/electron-builder*/**'
+
+win:
+  target:
+    - nsis
+    - portable
+  icon: build/icon.ico
+  signAndEditExecutable: false
+  verifyUpdateCodeSignature: false
+
+mac:
+  target:
+    - dmg
+    - zip
+
+linux:
+  target:
+    - deb
+    - zip
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
